@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JOKE API</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>JokeAPI</h1>
+    <div class="container">
+      <div class="response-area">
+        <% if (joke || setup || delivery) { %> <%= joke %> <%= setup %> <%=
+        delivery %> <% } else if (error) { %> <%= error %> <% } else { %> Enter
+        a word to get a joke. <% } %>
+      </div>
+      <form id="myForm" method="post">
+        <label for="secretInput">The word you search for in joke:</label>
+        <input type="text" id="secretInput" name="word" />
+
+        <input id="get" type="submit" value="SUBMIT" formaction="/" />
+      </form>
+    </div>
+  </body>
+</html>
